@@ -1,0 +1,46 @@
+#main div {
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+}
+
+.container-class {
+    background-image: url(polygon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    border: 2px dashed #333;
+}
+
+body{
+    /*background-image: linear-gradient(white, rgb(255, 231, 95));*/
+    background-image: url(Images/polygon.jpg);
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+button {
+    background-color: blue;
+    border: darkgray;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+}
