@@ -1,0 +1,102 @@
+<!doctype html>
+<title>Flaskr</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- Main title of the page-->
+<nav>
+  <h1>Simply UML</h1>
+  <ul>
+      <li><span></span>
+  </ul>
+</nav>
+
+<!-- Rhagavi: I am not sure if that part works-->
+<section class="content">
+  <header>
+  </header>
+    <div class="flash"></div>
+</section> 
+
+<!-- Code for the navigation tab-->
+<nav class="w3-bar w3-indigo">
+     <a href = "#uml" class = "w3-button w3-bar-item" style = "width : 33.3%" > <b> UML </b> </a>
+     <a href = "#help" class = "w3-button w3-bar-item" style = "width : 33.3%" > <b> Help </b> </a>
+     <a href = "#about" class = "w3-button w3-bar-item" style = "width : 33.3%" > <b> About </b> </a>
+</nav>
+
+
+<!-- This where the description of the website will take place-->
+<section class = "w3-container w3-center w3-content" style = "max-width: 600px">
+  <h2 class = "w3-wide"> About Simply UML </h2>
+  <p class = "w3-opacity"> <i> Description </i> </p>
+  <p class = "w3 - justify"> Welcome to Simply UML. Below are the tutorial for each UML diagram. Click on the animated UML diagram and enjoy the tutorial. Have fun learning!!! </p>
+</section>
+
+
+
+<!-- JavaScript code for scroll bar -->
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+</script>
+
+<!--Code for first UML diagram slideshow-->
+<section class = "w3-container w3-center w3-content" style = "max-width: 600px">
+<h3 class ="w3-wide" > First UML Diagram </h3>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides1" src="geometric.jpg" style="width:100%">
+  <img class="mySlides1" src="geometric1.jpg" style="width:100%">
+  <img class="mySlides1" src="finalExam.jpeg" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+</div>
+</section>
+
+<!--Code for second UML diagram slideshow -->
+<section class = "w3-container w3-center w3-content" style = "max-width: 600px">
+<h3 class ="w3-wide" > Second UML Diagram </h3>
+<div class="w3-content w3-display-container">
+  <img class="mySlides2" src="pinkPolygon.jpg" style="width:100%">
+  <img class="mySlides2" src="polygon.jpg" style="width:100%">
+  <img class="mySlides2" src="final.jpeg" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
+</div>
+</section>
+
+
+<!-- JavaScript code for the slideshow-->
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showDivs(1, 0);
+showDivs(1, 1);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+</html>
