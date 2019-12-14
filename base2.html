@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
 <!-- Main title of the page-->
 <nav>
   <h1>Simply UML</h1>
@@ -19,22 +22,52 @@
     <div class="flash"></div>
 </section> 
 
-<!-- Code for the navigation tab-->
-<nav class="w3-bar w3-indigo">
-     <a href = "#uml" class = "w3-button w3-bar-item" style = "width : 33.3%" > <b> UML </b> </a>
-     <a href = "#help" class = "w3-button w3-bar-item" style = "width : 33.3%" > <b> Help </b> </a>
-     <a href = "#about" class = "w3-button w3-bar-item" style = "width : 33.3%" > <b> About </b> </a>
-</nav>
+<!--Code for the tabs with the sub tab message -->
+<div class="w3-bar w3-indigo">
+  <button class="w3-bar-item w3-button" style = "width : 33.3%" onclick="openTab('UML')">UML</button>
+  <button class="w3-bar-item w3-button" style = "width : 33.3%" onclick="openTab('HELP')">HELP</button>
+  <button class="w3-bar-item w3-button" style = "width : 33.3%"   
+onclick="openTab('ABOUT')">ABOUT</button>
+</div>
 
+<div id="UML" class="w3-container w3-display-container tab">
+  <span onclick="this.parentElement.style.display='none'"
+  class="w3-button w3-large w3-display-topright">&times;</span>
+  <h2>UML</h2>
+  <p>London is the capital city of England.</p>
+</div>
 
-<!-- This where the description of the website will take place-->
-<section class = "w3-container w3-center w3-content" style = "max-width: 600px">
-  <h2 class = "w3-wide"> About Simply UML </h2>
+<div id="HELP" class="w3-container w3-display-container tab" style="display:none">
+  <span onclick="this.parentElement.style.display='none'"
+  class="w3-button w3-large w3-display-topright">&times;</span>
+  <h2>HELP</h2>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="ABOUT" class="w3-container w3-display-container tab" style="display:none">
+  <span onclick="this.parentElement.style.display='none'"
+  class="w3-button w3-large w3-display-topright">&times;</span>
+  <h2>ABOUT</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";  
+}
+</script>
+
+<!-- Welcome message -->
+ <section class = "w3-container w3-center w3-content" style = "max-width: 600px">
+  <h2 class = "w3-wide"> Welcome Message UML </h2>
   <p class = "w3-opacity"> <i> Description </i> </p>
   <p class = "w3 - justify"> Welcome to Simply UML. Below are the tutorial for each UML diagram. Click on the animated UML diagram and enjoy the tutorial. Have fun learning!!! </p>
 </section>
-
-
 
 <!-- JavaScript code for scroll bar -->
 <script>
@@ -98,5 +131,5 @@ function showDivs(n, no) {
   x[slideIndex[no]-1].style.display = "block";  
 }
 </script>
-
+</body>
 </html>

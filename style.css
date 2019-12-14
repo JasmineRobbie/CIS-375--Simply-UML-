@@ -5,7 +5,7 @@
 }
 
 .container-class {
-    background-image: url(polygon.jpg);
+    background-image: url(geometric2.jfif);
     background-repeat: no-repeat;
     background-position: center;
     width: 400px;
@@ -15,7 +15,7 @@
 
 body{
     /*background-image: linear-gradient(white, rgb(255, 231, 95));*/
-    background-image: url(Images/polygon.jpg);
+    background-image: url(Images/pinkFlower.jpg);
     background-position: center;
     background-size: cover;
     text-decoration: none;
