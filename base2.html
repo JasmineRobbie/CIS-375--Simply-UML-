@@ -33,22 +33,22 @@ onclick="openTab('ABOUT')">ABOUT</button>
 <div id="UML" class="w3-container w3-display-container tab">
   <span onclick="this.parentElement.style.display='none'"
   class="w3-button w3-large w3-display-topright">&times;</span>
-  <h2>UML</h2>
-  <p>London is the capital city of England.</p>
+  <h2><b><i>UML</i></b></h2>
+  <p>Fill in the description about UML.</p>
 </div>
 
 <div id="HELP" class="w3-container w3-display-container tab" style="display:none">
   <span onclick="this.parentElement.style.display='none'"
   class="w3-button w3-large w3-display-topright">&times;</span>
-  <h2>HELP</h2>
-  <p>Paris is the capital of France.</p> 
+  <h2><b><i>HELP</i><b></h2>
+  <p>Fill in the description about HELP.</p> 
 </div>
 
 <div id="ABOUT" class="w3-container w3-display-container tab" style="display:none">
   <span onclick="this.parentElement.style.display='none'"
   class="w3-button w3-large w3-display-topright">&times;</span>
-  <h2>ABOUT</h2>
-  <p>Tokyo is the capital of Japan.</p>
+  <h2><b><i>ABOUT</i></b></h2>
+  <p>Fill in the description about ABOUT.</p>
 </div>
 
 <script>
@@ -112,11 +112,11 @@ function scrollFunction() {
 <section class = "w3-container w3-center w3-content" style = "max-width: 600px">
   <h3 class ="w3-wide" > Third UML Diagram </h3>
   <div class="w3-content w3-display-container">
-    <img class="mySlides3" src="polygon2.jpg" style="width:100%">
-    <img class="mySlides3" src="geometric2.jpg" style="width:100%">
-    <img class="mySlides3" src="finalexam2.jpeg" style="width:100%">
-    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 2)">&#10094;</button>
-    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 2)">&#10095;</button>
+    <img class="mySlides3" src="Images/FinalExam/finalExam1.jpeg" style="width:100%">
+    <img class="mySlides3" src="Images/FinalExam/finalExam2.png" style="width:100%">
+    <img class="mySlides3" src="Images/FinalExam/finalExam3.png" style="width:100%">
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs1(-1, 1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs1(1, 1)">&#10095;</button>
   </div>
   </section>
 
@@ -124,32 +124,22 @@ function scrollFunction() {
   <section class = "w3-container w3-center w3-content" style = "max-width: 600px">
     <h3 class ="w3-wide" > Fourth UML Diagram </h3>
     <div class="w3-content w3-display-container">
-      <img class="mySlides4" src="pinkPolygon.jpg" style="width:100%">
-      <img class="mySlides4" src="polygon.jpg" style="width:100%">
-      <img class="mySlides4" src="final.jpeg" style="width:100%">
-      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 3)">&#10094;</button>
-      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 3)">&#10095;</button>
+      <img class="mySlides4" src="Images/Professors/maxim.jpg" style="width:100%">
+      <img class="mySlides4" src="Images/Professors/steiner.jpg" style="width:100%">
+      <img class="mySlides4" src="Images/Professors/shen.jpg" style="width:100%">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs1(-1, 0)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs1(1, 0)">&#10095;</button>
     </div>
     </section>
 
-    <!-- Code for the fifth UML diagram slideshow-->
-    <section class = "w3-container w3-center w3-content" style = "max-width: 600px">
-      <h3 class ="w3-wide" > Fifth UML Diagram </h3>
-      <div class="w3-content w3-display-container">
-        <img class="mySlides5" src="pinkPolygon.jpg" style="width:100%">
-        <img class="mySlides5" src="polygon.jpg" style="width:100%">
-        <img class="mySlides5" src="final.jpeg" style="width:100%">
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 3)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 3)">&#10095;</button>
-      </div>
-      </section>
+
 
 
 
 <!-- JavaScript code for the slideshow-->
 <script>
 var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
+var slideId = ["mySlides1", "mySlides2"]
 showDivs(1, 0);
 showDivs(1, 1);
 
@@ -167,6 +157,32 @@ function showDivs(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";  
 }
+
+
+var slideIndex1 = [1,1];
+var slideId1 = ["mySlides4", "mySlides3"]
+showDivs1(1, 0);
+showDivs1(1, 1);
+
+function plusDivs1(n1, no) {
+  showDivs1(slideIndex1[no] += n1, no);
+}
+
+function showDivs1(n1, no) {
+  var j;
+  var x1 = document.getElementsByClassName(slideId1[no]);
+  if (n1 > x1.length) {slideIndex1[no] = 1}
+  if (n1 < 1) {slideIndex1[no] = x1.length}
+  for (j = 0; j < x1.length; j++) {
+    x1[j].style.display = "none";  
+  }
+  x1[slideIndex1[no]-1].style.display = "block";  
+}
+
+
+
+
 </script>
+
 </body>
 </html>
